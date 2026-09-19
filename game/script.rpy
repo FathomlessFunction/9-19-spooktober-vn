@@ -5,6 +5,9 @@
 
 define e = Character("???")
 
+define fisherName = "???"
+define fisher = Character(fisherName)
+
 # define centred_left = Character(None,
 #     #what_size=20, #Font size
 #     what_xalign=0.1, #Centers text within the window
@@ -73,6 +76,32 @@ label start:
     extend "\n{space=550}{color=#d8c0c2}\"... creepy.\"{/color}"
 
     centered "'Rude', I thought, as I walked up to the counter."
+
+    extend """\n\nI would've done so pointedly, if I had enough energy, but.\n
+    {w=0.3}Well, {w=0.3}they {i}had{/i} been right about the morning.\n\n
+    {w=0.3}But I was still feeling irked."""
+
+    centered """
+    Then the customer behind me walked right through me and ordered a latte.
+    """
+    extend """\n\nDon't get me wrong here, I'm not being figurative; {w=0.5}she phased right {i}through{/i} me. 
+    \n\nLike a cold shower curtain brushing your leg during a lukewarm shower, the feeling stuck to me, even as I stumbled backwards. """
+    extend """\n\nThey all turned and stared as I {i}thumped{/i} into the entryway door."""
+
+    centered "{i}Embarrassed.{/i}\n\n{w=0.5}That's how I felt. \n\n{w=0.2}Dumb, right?"
+    extend "\n\nAs they looked right through me,{w=0.2} past the fingers of rain running down the floor-length windows, {w=0.2}and out into the foggy morning beyond us."
+
+    centered "I'm not sure if I still had a heart at that point, {w=0.2}but that didn't stop that feeling of it lodging in my throat as I stumbled out of the doorway."
+    extend "\n\n{w=0.3}I still remember the cheery chime of the entryway door, {w=0.2}the way the rain pooled on the sidewalk, {w=0.2}the dozens of black-draped workers walking through me as I dumbly tried another cafe.\n\n{w=0.5} ...like maybe it'd go differently somehow."
+
+    centered "Eventually, {w=0.2}I settled on a stool by the window.\n\nA customer glanced curiously over as I pulled it over to sit, {w=0.2}gaze skidding over and through me."
+
+    fisher "... I apologise for taking so long."
+
+    # test - this is how you can change the character's name when you get to know them.
+    # $ fisher = Character("Fisher")
+
+    fisher "This is a test."
 
     e "I AM SOME TEXT HELLO HELLO c:"
 
