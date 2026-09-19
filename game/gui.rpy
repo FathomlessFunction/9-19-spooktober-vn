@@ -14,6 +14,11 @@ init python:
 ## Enable checks for invalid or unstable properties in screens or transforms
 define config.check_conflicting_properties = True
 
+style default:
+    # these fixes are needed so our pixel font displays correctly
+    # without any weird lines
+    antialias False
+    hinting "none"
 
 ################################################################################
 ## GUI Configuration Variables
@@ -69,22 +74,22 @@ define gui.interface_text_font = "font/Nope8.ttf" # "DejaVuSans.ttf"
 # Nope is 8px, so sizes should be multiples of 8
 
 ## The size of normal dialogue text.
-define gui.text_size = 34
+define gui.text_size = 32
 
 ## The size of character names.
-define gui.name_text_size = 34
+define gui.name_text_size = 40
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 34
+define gui.interface_text_size = 40
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 34
+define gui.label_text_size = 40
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 34
+define gui.notify_text_size = 26
 
 ## The size of the game's title.
-define gui.title_text_size = 50
+define gui.title_text_size = 56
 
 
 ## Main and Game Menus #########################################################
