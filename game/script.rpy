@@ -9,6 +9,7 @@ define mc = Character("You")
 define fisherName = "???"
 define fisher = Character(fisherName)
 
+
 # define centred_left = Character(None,
 #     #what_size=20, #Font size
 #     what_xalign=0.1, #Centers text within the window
@@ -42,6 +43,17 @@ init:
     # https://www.renpy.org/wiki/renpy/doc/tutorials/Adding_Graphics_to_Your_Story
     image black = "#000000"
     image bg portal = "/images/bg/9-19-vn-doodle.png"
+
+    image bg portal1 = "/images/bg/9-19-vn-doodle-portal-1.png"
+    image bg portal2 = "/images/bg/9-19-vn-doodle-portal-2.png"
+
+# https://www.renpy.org/doc/html/transforms.html#atl
+image portal_animated:
+    "/images/bg/9-19-vn-doodle-portal-1.png"
+    pause 1
+    "/images/bg/9-19-vn-doodle-portal-2.png"
+    pause 1
+    repeat
 
 label start:
 
@@ -176,7 +188,8 @@ label start:
         "Who are you?":
             mc "Who are you?"
             "The question slipped out of me as I opened the cupboard door."
-            show bg portal with dissolve
+            # show bg portal with dissolve
+            show portal_animated with dissolve
             "Beyond it, space yawned in all of its infinite majesty."
             "Pillowing plumes of purple, blue and endless darkness winked at me, as if amused by my insignificance."
 
@@ -187,8 +200,9 @@ label start:
             "I believed them. \n{w=0.3}That alone should've given me pause..."
 
             "The room spun as I felt myself get pulled forwards."
-            "My damp sneakers gave little to no purchase, squeaking on the cheap, plastic floor, and I felt myself falling..."
-            hide bg portal with dissolve
+            "My damp sneakers gave little to no purchase, squeaking on the cheap, plastic floor, and I felt myself falling..." with vpunch
+            # hide bg portal with dissolve
+            hide portal_animated with dissolve
             show black
 
             "... into that infinite, dizzying void of space."
