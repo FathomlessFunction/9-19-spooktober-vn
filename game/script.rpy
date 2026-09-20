@@ -4,6 +4,7 @@
 # name of the character.
 
 define e = Character("???")
+define mc = Character("You")
 
 define fisherName = "???"
 define fisher = Character(fisherName)
@@ -40,6 +41,7 @@ define right_centred_text = Character
 init:
     # https://www.renpy.org/wiki/renpy/doc/tutorials/Adding_Graphics_to_Your_Story
     image black = "#000000"
+    image bg portal = "/images/bg/9-19-vn-doodle.png"
 
 label start:
 
@@ -98,15 +100,120 @@ label start:
 
     fisher "... I apologise for taking so long."
 
+    "The voice was warm, gentle; {w=0.3}almost like a hug if such a thing wouldn't have skidded right through me."
+
+    fisher "You were terribly difficult to find, {w=0.1}you know. {w=0.3}\nNot many people manage to get all the way to a {i}cafe{/i} after something like this."
+
+    "There was a smile in the voice now, {w=0.2}but I didn't bother looking over."
+    "After being ignored by more than a dozen people, {w=0.2}there was no reason to believe they could see me, {w=0.2}let alone talk to me."
+
     # test - this is how you can change the character's name when you get to know them.
     # $ fisher = Character("Fisher")
 
-    fisher "This is a test."
+    fisher "... After dying."
 
-    e "I AM SOME TEXT HELLO HELLO c:"
+    mc "...!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    "That made me look over. \n{w=0.3}They'd said it softly, {w=0.3}like crushing someone slowly would hurt any less."
+
+    fisher "... ha! \n{w=0.1}You must have desperately wanted a coffee. \n\n{w=0.2}Would you like me to fetch you something, {w=0.1}before we depart?"
+
+    mc "What?"
+
+    "My mind tumbled over the words uselessly, like they were meaningless syllables rather than something that held any sort of meaning."
+
+    fisher "... I understand. It is overwhelming, is it not?"
+
+    "There was another pause, and again, I could feel that smile. \n\nIt was placating."
+    "As I wrestled with my thoughts, they reached out a shadowy hand to rest on my shoulder, in a gentle pat."
+
+    menu: 
+        "It made me feel..."
+
+        "angry":
+            "grumpy dialogue >:c"
+        "reassured":
+            "... Reassured. At least, {i}some{/i} things didn't phase right through me."
+
+    mc "... You can really see me?"
+
+    "My voice sounded hoarse and faint, even to me."
+    "Like an idiot, I held up three fingers, {w=0.2}like this stranger was trying to cheat me somehow."
+
+    "I hadn't been expecting them to laugh. It sounded like wind-chimes, stirred gently by the wind."
+
+    "... it stained their next words, making them slip through the air lightly."
+
+    fisher "You're holding up three fingers, {w=0.2}and a very impressive front indeed."
+
+    "Their words carried themselves on another laugh."
+    "Not a mean one, though it still jabbed keenly at how I was currently feeling."
+    "The stranger seemed to sense this as they leaned forward and pressed their next words softly into the space between us."
+    
+    fisher "I mean to say, you must be exhausted. \n{w=0.2}You are no longer meant for this place. Please."
+
+    "With a sweeping motion, they stood, and gestured towards the door of the cafe's supply cupboard."
+    
+    mc "(Why are they gesturing to it like I'm supposed to be impressed...?)"
+
+    fisher "I will be right after you."
+
+    "I couldn't imagine how brooms and extra supplies of sugar and coffee would assist me.\nPerhaps they were mad."
+    "... perhaps {i}I{/i} was mad."
+    "Mad, or desperate. Because I numbly stood up at their tone anyway."
+    "What else could I do?"
+    #"Still, they must've been right about me being exhausted, {w=0.1}because I numbly stood up at their tone."
+    "Pins and needles ran down my legs. \nHow long had I been sitting for?"
+
+    # walking sound effect would be cool here
+
+    "The four steps to the supply cabinet felt long, {w=0.1}my sneakers squeaking against the plastic tiling of the floor."
+    
+
+    menu:
+        "My head was filled with so many questions, I could barely pick out a single one..."
+
+        "Who are you?":
+            mc "Who are you?"
+            "The question slipped out of me as I opened the cupboard door."
+            show bg portal with dissolve
+            "Beyond it, space yawned in all of its infinite majesty."
+            "Pillowing plumes of purple, blue and endless darkness winked at me, as if amused by my insignificance."
+
+            "It was so overwhelming, that I had already forgotten what it was that I had asked. \nThe hand on my shoulder made me start."
+
+            fisher "... A friend. I am here to help you."
+
+            "I believed them. \n{w=0.3}That alone should've given me pause..."
+
+            "The room spun as I felt myself get pulled forwards."
+            "My damp sneakers gave little to no purchase, squeaking on the cheap, plastic floor, and I felt myself falling..."
+            hide bg portal with dissolve
+            show black
+
+            "... into that infinite, dizzying void of space."
+
+            "end for now <3"
+
+
+
+    # show bg portal with dissolve
+
+    # fisher "This is a test."
+
+    # e "I AM SOME TEXT HELLO HELLO c:"
+
+    # e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
     return
+
+# to jump to a label you go
+# jump label_name
+# c:
+# so just leaving these here for future reference
+# here's the docs for this: https://www.renpy.org/doc/html/menus.html
+label grumpy_dialogue:
+
+label met_fisher:

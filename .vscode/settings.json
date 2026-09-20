@@ -5,6 +5,7 @@
         "**/*.rpymc": true,
         "**/cache/": true
     },
+    "chat.disableAIFeatures": true,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -137,5 +138,10 @@
                 }
             }
         ]
+    },
+    "python.analysis.aiCodeActions": {},
+    "go.experiments": {
+
+        "testExplorer": true
     }
 }
